@@ -9,6 +9,18 @@ def loadData(URL,header) :
         #storing the information to "result" variable
         result=URLrequest.json()
         return result
+# takes the input from console of height
+def getInput():
+     while True:
+        try :
+           result = int(input("Introduce height in inches adds up to:"))
+           break
+        except ValueError:
+            print("Please introduce a number")
+     return result
+# program starting point
+totalHeight = getInput()
+    
 # url hardcoded
 url='https://mach-eight.uc.r.appspot.com'
 # load data into result (as a dcitionary) variable from url
